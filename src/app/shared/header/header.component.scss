@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: var(--dark-grey);
+  color: white;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: white;
+  }
+}
