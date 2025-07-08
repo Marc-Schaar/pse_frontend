@@ -17,9 +17,9 @@ export class MainLibaryComponent implements OnInit {
         id: 1,
         name: 'Wasserstoff',
         symbol: 'H',
-        atomicNumber: 1,
+        ordnungszahl: 1,
       }),
-      new PseElement({ id: 2, name: 'Helium', symbol: 'He', atomicNumber: 2 })
+      new PseElement({ id: 2, name: 'Helium', symbol: 'He', ordnungszahl: 2 })
     );
     this.pseElementsTorRender = [...this.databasePseElements];
   }
