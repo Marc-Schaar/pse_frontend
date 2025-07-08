@@ -8,7 +8,7 @@ export class PseElement {
   periodekategorie: string;
   siedepunkt: number;
   schmelzpunkt: number;
-  elektronegativität: number;
+  elektronegativitaet: number;
   dichte: number;
   entdeckt: string;
   oxidationszahlen: number[];
@@ -25,7 +25,7 @@ export class PseElement {
     this.periodekategorie = obj?.periodekategorie || '';
     this.siedepunkt = obj?.siedepunkt || 0;
     this.schmelzpunkt = obj?.schmelzpunkt || 0;
-    this.elektronegativität = obj?.elektronegativität || 0;
+    this.elektronegativitaet = obj?.elektronegativitaet || 0;
     this.dichte = obj?.dichte || 0;
     this.entdeckt = obj.entdeckt || '';
     this.oxidationszahlen = obj?.oxidationszahlen || [0];
@@ -44,7 +44,7 @@ export class PseElement {
       periodekategorie: this.periodekategorie,
       siedepunkt: this.siedepunkt,
       schmelzpunkt: this.schmelzpunkt,
-      elektronegativität: this.elektronegativität,
+      elektronegativitaet: this.elektronegativitaet,
       dichte: this.dichte,
       entdeckt: this.entdeckt,
       oxidationszahlen: this.oxidationszahlen,

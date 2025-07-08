@@ -1,9 +1,28 @@
 .card {
   background-color: white;
   border-radius: 8px;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  aspect-ratio: 1;
   align-items: center;
   justify-content: center;
   padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.125s ease-in-out;
+
+  p {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media screen and (width>1000px) {
+  .card {
+    &:hover {
+      scale: 1.1;
+      cursor: pointer;
+    }
+  }
 }
