@@ -2,7 +2,15 @@
   <h1>Periodensystem der Elemente</h1>
   <div class="container">
     @for (element of getPseElements(); track $index) {
-    <app-element-card [element]="element"></app-element-card>
+    <app-element-card
+      [element]="element"
+      (elementDetail)="handleElementClick($event)"
+    ></app-element-card>
     }
   </div>
+
+  <app-element-card-dialog
+    class="dialog"
+    [ngClass]="{ openDialog: isDialogOpen() }"
+  ></app-element-card-dialog>
 </main>

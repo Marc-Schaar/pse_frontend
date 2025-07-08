@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { PseElement } from '../../modules/pse-element';
 import { ElementCardComponent } from '../element-card/element-card.component';
+import { ElementCardDialogComponent } from '../element-card-dialog/element-card-dialog.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-main-libary',
-  imports: [ElementCardComponent],
+  imports: [CommonModule, ElementCardComponent, ElementCardDialogComponent],
   templateUrl: './main-libary.component.html',
   styleUrl: './main-libary.component.scss',
 })
 export class MainLibaryComponent implements OnInit {
   private databasePseElements: PseElement[] = [];
   private pseElementsTorRender: PseElement[] = [];
+  private diologOpen: Boolean = false;
 
   ngOnInit(): void {
     this.databasePseElements.push(
@@ -54,5 +57,13 @@ export class MainLibaryComponent implements OnInit {
 
   public getPseElements() {
     return this.pseElementsTorRender;
+  }
+
+  public handleElementClick(element: PseElement) {
+    console.log(element);
+    this.diologOpen = true;
+  }
+  public isDialogOpen() {
+    return this.diologOpen;
   }
 }
