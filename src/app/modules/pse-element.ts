@@ -17,20 +17,20 @@ export class PseElement {
 
   constructor(obj: PseElement) {
     this.id = obj.id;
-    this.ordnungszahl = obj.ordnungszahl;
-    this.symbol = obj.symbol;
-    this.name = obj.name;
-    this.atommasse = obj.atommasse;
-    this.aggregatzustand = obj.aggregatzustand;
-    this.periodekategorie = obj.periodekategorie;
-    this.siedepunkt = obj.siedepunkt;
-    this.schmelzpunkt = obj.schmelzpunkt;
-    this.elektronegativität = obj.elektronegativität;
-    this.dichte = obj.dichte;
-    this.entdeckt = obj.entdeckt;
-    this.oxidationszahlen = obj.oxidationszahlen;
-    this.gruppe = obj.gruppe;
-    this.periode = obj.periode;
+    this.ordnungszahl = obj.ordnungszahl || 0;
+    this.symbol = obj.symbol || '';
+    this.name = obj.name || '';
+    this.atommasse = obj.atommasse || 0;
+    this.aggregatzustand = obj.aggregatzustand || '';
+    this.periodekategorie = obj.periodekategorie || '';
+    this.siedepunkt = obj.siedepunkt || 0;
+    this.schmelzpunkt = obj.schmelzpunkt || 0;
+    this.elektronegativität = obj.elektronegativität || 0;
+    this.dichte = obj.dichte || 0;
+    this.entdeckt = obj.entdeckt || '';
+    this.oxidationszahlen = obj.oxidationszahlen || [0];
+    this.gruppe = obj.gruppe || 0;
+    this.periode = obj.periode || 0;
   }
 
   toJSON() {
