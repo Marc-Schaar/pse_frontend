@@ -13,7 +13,8 @@ import { CommonModule } from '@angular/common';
 export class MainLibaryComponent implements OnInit {
   private databasePseElements: PseElement[] = [];
   private pseElementsTorRender: PseElement[] = [];
-  private diologOpen: Boolean = false;
+  private diologOpen: boolean = false;
+  private elementDetail: PseElement | null = null;
 
   ngOnInit(): void {
     this.databasePseElements.push(
@@ -60,10 +61,14 @@ export class MainLibaryComponent implements OnInit {
   }
 
   public handleElementClick(element: PseElement) {
-    console.log(element);
     this.diologOpen = true;
+    this.elementDetail = element;
   }
-  public isDialogOpen() {
+  public isDialogOpen(): boolean {
     return this.diologOpen;
+  }
+
+  public getElementDetail(): PseElement | null {
+    return this.elementDetail;
   }
 }

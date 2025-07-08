@@ -10,6 +10,7 @@
   </div>
 
   <app-element-card-dialog
+    [element]="getElementDetail()"
     class="dialog"
     [ngClass]="{ openDialog: isDialogOpen() }"
   ></app-element-card-dialog>
