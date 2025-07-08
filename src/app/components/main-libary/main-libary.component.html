@@ -1,10 +1,7 @@
 <main>
   <div class="container">
     @for (element of getPseElements(); track $index) {
-    <div class="card">
-      <p>{{ element.ordnungszahl }}</p>
-      <div>{{ element.symbol }}</div>
-    </div>
+    <app-element-card [element]="element"></app-element-card>
     }
   </div>
 </main>

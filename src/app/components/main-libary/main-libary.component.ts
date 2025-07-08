@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PseElement } from '../../modules/pse-element';
+import { ElementCardComponent } from '../element-card/element-card.component';
 
 @Component({
   selector: 'app-main-libary',
-  imports: [],
+  imports: [ElementCardComponent],
   templateUrl: './main-libary.component.html',
   styleUrl: './main-libary.component.scss',
 })
