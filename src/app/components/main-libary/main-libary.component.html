@@ -11,6 +11,7 @@
 
   <app-element-card-dialog
     [element]="getElementDetail()"
+    (dialogOpen)="closeDialog()"
     class="dialog"
     [ngClass]="{ openDialog: isDialogOpen() }"
   ></app-element-card-dialog>
