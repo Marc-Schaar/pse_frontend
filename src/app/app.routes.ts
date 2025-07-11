@@ -4,6 +4,8 @@ import { MainLibaryComponent } from './components/main-libary/main-libary.compon
 export const routes: Routes = [
   {
     path: '',
-    component: MainLibaryComponent,
+    redirectTo: 'pse-elements',
+    pathMatch: 'full',
   },
+  { path: 'pse-elements', component: MainLibaryComponent },
 ];
