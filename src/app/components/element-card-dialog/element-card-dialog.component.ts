@@ -28,6 +28,7 @@ export class ElementCardDialogComponent implements OnInit {
       if (id) {
         this.dbService.loadOnefromDb(+id).subscribe((data) => {
           this.element = data;
+          console.log(data);
         });
       }
     });

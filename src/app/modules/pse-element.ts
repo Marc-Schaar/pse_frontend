@@ -5,13 +5,13 @@ export class PseElement {
   name: string;
   atommasse: number;
   aggregatzustand: string;
-  periodekategorie: string;
-  siedepunkt: number;
-  schmelzpunkt: number;
+  kategorie: string;
+  siedepunkt_k: number;
+  schmelzpunkt_k: number;
   elektronegativitaet: number;
-  dichte: number;
+  dichte_g_cm3: number;
   entdeckt: string;
-  oxidationszahlen: number[];
+  oxidationszahlen: string;
   gruppe: number;
   periode: number;
 
@@ -22,13 +22,13 @@ export class PseElement {
     this.name = obj?.name || '';
     this.atommasse = obj?.atommasse || 0;
     this.aggregatzustand = obj?.aggregatzustand || '';
-    this.periodekategorie = obj?.periodekategorie || '';
-    this.siedepunkt = obj?.siedepunkt || 0;
-    this.schmelzpunkt = obj?.schmelzpunkt || 0;
+    this.kategorie = obj?.kategorie || '';
+    this.siedepunkt_k = obj?.siedepunkt_k || 0;
+    this.schmelzpunkt_k = obj?.schmelzpunkt_k || 0;
     this.elektronegativitaet = obj?.elektronegativitaet || 0;
-    this.dichte = obj?.dichte || 0;
+    this.dichte_g_cm3 = obj?.dichte_g_cm3 || 0;
     this.entdeckt = obj.entdeckt || '';
-    this.oxidationszahlen = obj?.oxidationszahlen || [0];
+    this.oxidationszahlen = obj?.oxidationszahlen || '';
     this.gruppe = obj?.gruppe || 0;
     this.periode = obj?.periode || 0;
   }
@@ -41,11 +41,11 @@ export class PseElement {
       name: this.name,
       atommasse: this.atommasse,
       aggregatzustand: this.aggregatzustand,
-      periodekategorie: this.periodekategorie,
-      siedepunkt: this.siedepunkt,
-      schmelzpunkt: this.schmelzpunkt,
+      kategorie: this.kategorie,
+      siedepunkt: this.siedepunkt_k,
+      schmelzpunkt_k: this.schmelzpunkt_k,
       elektronegativitaet: this.elektronegativitaet,
-      dichte: this.dichte,
+      dichte_g_cm3: this.dichte_g_cm3,
       entdeckt: this.entdeckt,
       oxidationszahlen: this.oxidationszahlen,
       gruppe: this.gruppe,

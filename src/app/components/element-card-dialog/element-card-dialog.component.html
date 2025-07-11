@@ -1,6 +1,18 @@
 <div class="wrapper">
   <div class="container">
     <button (click)="closeDialog()">X</button>
-    <p>{{ element.name }}</p>
+    <p>Ordnungszahl: {{ element.ordnungszahl }}</p>
+    <p>Name: {{ element.name }} ({{ element.symbol }})</p>
+    <p>Aggregatzustand: {{ element.aggregatzustand }}</p>
+    <p>Atommasse: {{ element.atommasse }}</p>
+    <p>Dichte: {{ element.dichte_g_cm3 }}g/cm3</p>
+    <p>Elektronennegativität: {{ element.elektronegativitaet }}</p>
+    <p>Endeckt von: {{ element.entdeckt }}</p>
+    <p>Gruppe: {{ element.gruppe }}</p>
+    <p>Oxidationszahlen: {{ element.oxidationszahlen }}</p>
+    <p>Periode: {{ element.periode }}</p>
+    <p>Kategorie: {{ element.kategorie }}</p>
+    <p>Schmelzpunkt: {{ element.schmelzpunkt_k }}</p>
+    <p>Siedepunkt: {{ element.siedepunkt_k }}</p>
   </div>
 </div>
