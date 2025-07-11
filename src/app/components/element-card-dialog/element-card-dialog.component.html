@@ -1,6 +1,4 @@
 <div class="wrapper">
-  <button (click)="nextElement()">Next</button>
-  <button (click)="prevElement()">Prev</button>
   <div class="container">
     <button (click)="closeDialog()">X</button>
     <p>Ordnungszahl: {{ element.ordnungszahl }}</p>
@@ -16,5 +14,7 @@
     <p>Kategorie: {{ element.kategorie }}</p>
     <p>Schmelzpunkt: {{ element.schmelzpunkt_k }}</p>
     <p>Siedepunkt: {{ element.siedepunkt_k }}</p>
+    <button (click)="prevElement()">Prev</button>
+    <button (click)="nextElement()">Next</button>
   </div>
 </div>
