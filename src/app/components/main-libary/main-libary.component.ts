@@ -6,6 +6,7 @@ import { ApiService } from '../../services/api.service';
 import { PseElement } from '../../modules/pse-element';
 import { ElementCardComponent } from '../element-card/element-card.component';
 import { ElementCardDialogComponent } from '../element-card-dialog/element-card-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-libary',
@@ -19,7 +20,7 @@ export class MainLibaryComponent implements OnInit {
   private databasePseElements: PseElement[] = [];
   private pseElementsTorRender: PseElement[] = [];
   private dialogOpen: boolean = false;
-  private elementDetail: PseElement | null = null;
+  private elementDetail: number | null = null;
 
   ngOnInit() {
     this.dbService.loadAllfromDb().subscribe((data) => {
@@ -32,20 +33,17 @@ export class MainLibaryComponent implements OnInit {
     return this.pseElementsTorRender;
   }
 
-  public handleElementClick(element: PseElement) {
+  public handleElementClick(id: number) {
     this.dialogOpen = true;
-    this.elementDetail = element;
+    this.dbService.setUrlQuerryParamId(id);
   }
+
   public isDialogOpen(): boolean {
     return this.dialogOpen;
   }
 
-  public getElementDetail(): PseElement | null {
-    return this.elementDetail;
-  }
-
   public closeDialog() {
     this.dialogOpen = false;
-    this.elementDetail = null;
+    this.dbService.removeQueryParam();
   }
 }
