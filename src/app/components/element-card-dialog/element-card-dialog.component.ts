@@ -1,5 +1,4 @@
 import { Component, EventEmitter, inject, OnInit, Output } from '@angular/core';
-import { Input } from '@angular/core';
 import { PseElement } from '../../modules/pse-element';
 import { ApiService } from '../../services/api.service';
 import { ActivatedRoute } from '@angular/router';
@@ -16,7 +15,8 @@ export class ElementCardDialogComponent implements OnInit {
 
   @Output() dialogOpen = new EventEmitter<boolean>();
 
-  element: PseElement = new PseElement(0);
+  element: PseElement = new PseElement(1);
+  id: string | null = null;
 
   ngOnInit(): void {
     this.loadQueryParam();
@@ -24,11 +24,10 @@ export class ElementCardDialogComponent implements OnInit {
 
   public loadQueryParam() {
     this.route.queryParamMap.subscribe((params) => {
-      const id = params.get('id');
-      if (id) {
-        this.dbService.loadOnefromDb(+id).subscribe((data) => {
+      this.id = params.get('id');
+      if (this.id) {
+        this.dbService.loadOnefromDb(+this.id).subscribe((data) => {
           this.element = data;
-          console.log(data);
         });
       }
     });
@@ -36,5 +35,15 @@ export class ElementCardDialogComponent implements OnInit {
 
   public closeDialog() {
     this.dialogOpen.emit(false);
+  }
+
+  public nextElement() {
+    if (this.id && +this.id < 118)
+      this.dbService.setUrlQuerryParamId(+this.id + 1);
+  }
+
+  public prevElement() {
+    if (this.id && +this.id > 1)
+      this.dbService.setUrlQuerryParamId(+this.id - 1);
   }
 }
