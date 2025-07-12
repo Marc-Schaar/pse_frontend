@@ -1,9 +1,9 @@
 <main class="main">
   <h1>Periodensystem der Elemente</h1>
   <input
-    placeholder="Nach Elementen suchen Ordnungszahl oder Name"
+    placeholder="Suchen mit Ordnungszahl oder Name"
     type="text"
-    name=""
+    class="searchInput"
     [(ngModel)]="searchValue"
     (input)="searchElementInit()"
   />
@@ -21,7 +21,9 @@
           (elementDetail)="handleElementClick($event)"
         ></app-element-card>
       </div>
-      } }
+      }}@empty {
+      <p>Keine Elemente vorhanden</p>
+      }
     </div>
 
     <div class="pse-grid">

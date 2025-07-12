@@ -9,10 +9,31 @@
   --dark-grey: rgb(63, 63, 63);
   --bg-color: rgb(91, 91, 91);
   --bg-color-transparent: rgba(0, 0, 0, 0.25);
+
+  --border-grey: rgb(102, 102, 102);
+}
+
+body {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-s {
+  gap: 12px;
 }
 
 .halogen {

@@ -1,5 +1,7 @@
 .main {
-  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--bg-color);
 }
 
@@ -7,12 +9,20 @@ h1 {
   color: white;
 }
 
+.searchInput {
+  width: 280px;
+  padding: 8px 24px;
+  outline: 1px solid var(--border-grey);
+  border-radius: 24px;
+  color: white;
+
+  &::placeholder {
+    color: white;
+  }
+}
+
 .container {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-wrap: wrap;
-  height: calc(100svh - 40px);
+  height: calc(100svh - 99px);
   overflow: auto;
 }
 

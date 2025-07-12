@@ -1,32 +1,41 @@
 .card {
-  width: 80px;
+  width: 60px;
 
-  height: 140px;
+  height: 88px;
   background-color: white;
   border-radius: 8px;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.125s ease-in-out;
+  font-size: 0.75rem;
 
-  p {
+  .inline-flex {
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
   }
 
-  .card-footer {
-    display: flex;
-    span:first-child {
-      display: block;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+  .element-name {
+    transition: all 0.125s ease-in-out;
+    &:hover {
+      position: fixed;
+      background-color: white;
+      z-index: 2;
+      overflow: unset;
+      text-overflow: initial !important;
     }
   }
+}
+
+.text-collaps {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media screen and (width>1000px) {
