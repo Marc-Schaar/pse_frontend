@@ -1,20 +1,65 @@
 <div class="wrapper">
   <div class="container">
-    <button (click)="closeDialog()">X</button>
-    <p>Ordnungszahl: {{ element.ordnungszahl }}</p>
-    <p>Name: {{ element.name }} ({{ element.symbol }})</p>
-    <p>Aggregatzustand: {{ element.aggregatzustand }}</p>
-    <p>Atommasse: {{ element.atommasse }}</p>
-    <p>Dichte: {{ element.dichte_g_cm3 }}g/cm3</p>
-    <p>Elektronennegativität: {{ element.elektronegativitaet }}</p>
-    <p>Endeckt von: {{ element.entdeckt }}</p>
-    <p>Gruppe: {{ element.gruppe }}</p>
-    <p>Oxidationszahlen: {{ element.oxidationszahlen }}</p>
-    <p>Periode: {{ element.periode }}</p>
-    <p>Kategorie: {{ element.kategorie }}</p>
-    <p>Schmelzpunkt: {{ element.schmelzpunkt_k }}</p>
-    <p>Siedepunkt: {{ element.siedepunkt_k }}</p>
-    <button (click)="prevElement()">Prev</button>
-    <button (click)="nextElement()">Next</button>
+    <button class="close-btn" (click)="closeDialog()">X</button>
+
+    <table class="element-table">
+      <tr>
+        <td>Ordnungszahl</td>
+        <td>{{ element.ordnungszahl }}</td>
+      </tr>
+      <tr>
+        <td>Name (Symbol)</td>
+        <td>{{ element.name }} ({{ element.symbol }})</td>
+      </tr>
+      <tr>
+        <td>Aggregatzustand</td>
+        <td>{{ element.aggregatzustand }}</td>
+      </tr>
+      <tr>
+        <td>Atommasse</td>
+        <td>{{ element.atommasse }}</td>
+      </tr>
+      <tr>
+        <td>Dichte</td>
+        <td>{{ element.dichte_g_cm3 }} g/cm³</td>
+      </tr>
+      <tr>
+        <td>Elektronennegativität</td>
+        <td>{{ element.elektronegativitaet }}</td>
+      </tr>
+      <tr>
+        <td>Entdeckt von</td>
+        <td>{{ element.entdeckt }}</td>
+      </tr>
+      <tr>
+        <td>Gruppe</td>
+        <td>{{ element.gruppe }}</td>
+      </tr>
+      <tr>
+        <td>Oxidationszahlen</td>
+        <td>{{ element.oxidationszahlen }}</td>
+      </tr>
+      <tr>
+        <td>Periode</td>
+        <td>{{ element.periode }}</td>
+      </tr>
+      <tr>
+        <td>Kategorie</td>
+        <td>{{ element.kategorie }}</td>
+      </tr>
+      <tr>
+        <td>Schmelzpunkt</td>
+        <td>{{ element.schmelzpunkt_k }}</td>
+      </tr>
+      <tr>
+        <td>Siedepunkt</td>
+        <td>{{ element.siedepunkt_k }}</td>
+      </tr>
+    </table>
+
+    <div class="button-row">
+      <button (click)="prevElement()">Prev</button>
+      <button (click)="nextElement()">Next</button>
+    </div>
   </div>
 </div>

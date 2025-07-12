@@ -7,10 +7,13 @@
 
 :root {
   --dark-grey: rgb(63, 63, 63);
+
   --bg-color: rgb(91, 91, 91);
   --bg-color-transparent: rgba(0, 0, 0, 0.25);
 
   --border-grey: rgb(102, 102, 102);
+
+  --tabel-row-grey: rgb(236, 236, 236);
 }
 
 body {
@@ -26,6 +29,7 @@ input,
 button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .d-flex {
