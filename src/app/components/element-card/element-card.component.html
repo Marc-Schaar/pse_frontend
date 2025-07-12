@@ -1,12 +1,12 @@
 <div class="card" (click)="openDialog(element.id)">
   <p>
     <span>{{ element.ordnungszahl }}</span>
-    <span>{{ element.atommasse }}</span>
+    <span>{{ element.atommasse | number : "1.2-2" }}</span>
   </p>
 
-  <h2>{{ element.symbol }}</h2>
+  <h2 [ngClass]="getElementClass()">{{ element.symbol }}</h2>
 
-  <p>
+  <p class="card-footer">
     <span>{{ element.name }}</span>
     <span>{{ element.elektronegativitaet }}</span>
   </p>

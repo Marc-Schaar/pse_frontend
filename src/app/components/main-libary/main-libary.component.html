@@ -1,12 +1,32 @@
 <main class="main">
   <h1>Periodensystem der Elemente</h1>
   <div class="container">
-    @for (element of getPseElements(); track $index) {
-    <app-element-card
-      [element]="element"
-      (elementDetail)="handleElementClick($event)"
-    ></app-element-card>
-    }
+    <div class="pse-grid">
+      @for (element of getPseElements(); track element.ordnungszahl) { @if
+      (element.gruppe) {
+      <div
+        class="card"
+        [style.gridColumn]="getGridColumn(element)"
+        [style.gridRow]="getGridRow(element)"
+      >
+        <app-element-card
+          [element]="element"
+          (elementDetail)="handleElementClick($event)"
+        ></app-element-card>
+      </div>
+      } }
+    </div>
+
+    <div class="pse-grid">
+      @for (element of getPseElements(); track element.ordnungszahl) { @if
+      (!element.gruppe) {
+      <app-element-card
+        class="card"
+        [element]="element"
+        (elementDetail)="handleElementClick($event)"
+      ></app-element-card>
+      } }
+    </div>
   </div>
 
   <app-element-card-dialog

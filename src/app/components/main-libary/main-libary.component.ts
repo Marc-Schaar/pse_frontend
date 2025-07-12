@@ -6,7 +6,6 @@ import { ApiService } from '../../services/api.service';
 import { PseElement } from '../../modules/pse-element';
 import { ElementCardComponent } from '../element-card/element-card.component';
 import { ElementCardDialogComponent } from '../element-card-dialog/element-card-dialog.component';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-libary',
@@ -45,5 +44,15 @@ export class MainLibaryComponent implements OnInit {
   public closeDialog() {
     this.dialogOpen = false;
     this.dbService.removeQueryParam();
+  }
+
+  getGridColumn(element: PseElement): number | null {
+    if (element.gruppe == null) {
+      return null;
+    } else return element.gruppe;
+  }
+
+  getGridRow(element: PseElement): number {
+    return element.periode;
   }
 }
