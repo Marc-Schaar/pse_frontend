@@ -40,34 +40,46 @@ button {
   gap: 12px;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .halogen {
-  color: #ff8c00;
+  background-color: #ff8c00;
 }
 
 .edelgas {
-  color: #20b2aa; // Türkis
+  background-color: #20b2aa;
 }
 
 .metall {
-  color: #a9a9a9;
+  background-color: #a9a9a9;
 }
 
 .erdalkalimetall {
-  color: #6a5acd;
+  background-color: #6a5acd;
 }
 
 .alkalimetall {
-  color: #ff4500;
+  background-color: #ff4500;
 }
 
 .halbmetall {
-  color: #daa520;
+  background-color: #daa520;
 }
 
 .nichtmetall {
-  color: #228b22;
+  background-color: #228b22;
 }
 
 .uebergangsmetall {
-  color: #7272a7;
+  background-color: #7272a7;
+}
+
+.seltene-erden {
+  background-color: #9370db;
+}
+
+.default {
+  background-color: white;
 }

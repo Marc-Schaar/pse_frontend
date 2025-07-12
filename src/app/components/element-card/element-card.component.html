@@ -1,13 +1,13 @@
-<article class="card" (click)="openDialog(element.id)">
-  <section class="d-flex gap-s inline-flex">
-    <span>{{ element.ordnungszahl }}</span>
-    <span class="text-collaps">{{ element.atommasse | number : "1.2-2" }}</span>
-  </section>
+<article
+  class="card"
+  [ngClass]="getElementClass()"
+  (click)="openDialog(element.id)"
+>
+  <p>{{ element.ordnungszahl }}</p>
 
-  <h2 [ngClass]="getElementClass()">{{ element.symbol }}</h2>
+  <h2>{{ element.symbol }}</h2>
 
-  <section class="d-flex inline-flex">
-    <p class="text-collaps element-name">{{ element.name }}</p>
-    <p>{{ element.elektronegativitaet }}</p>
-  </section>
+  <p class="inline-flex">
+    <span class="text-collaps">{{ element.name }}</span>
+  </p>
 </article>

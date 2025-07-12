@@ -38,8 +38,11 @@ export class ElementCardComponent {
         return 'nichtmetall';
       case 'Übergangsmetall':
         return 'uebergangsmetall';
+
+      case 'Seltene Erden':
+        return 'seltene-erden';
       default:
-        return '';
+        return 'default';
     }
   }
 }
