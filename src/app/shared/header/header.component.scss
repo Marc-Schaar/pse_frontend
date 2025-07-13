@@ -1,9 +1,15 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 12px 24px;
   background-color: var(--dark-grey);
   color: white;
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
 
   li {
     list-style: none;
