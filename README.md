@@ -4,9 +4,9 @@ Dieses Projekt ist eine Angular-Anwendung zur Darstellung des Periodensystems de
 
 ## Voraussetzungen
 
-Node.js
-Angular CLI
-Backend mit einer API unter http://localhost:3000/api/pse-elements
+- Node.js
+- Angular CLI
+- Backend mit einer API unter http://localhost:3000/api/pse-elements
 
 ## Starten der Anwendung
 
