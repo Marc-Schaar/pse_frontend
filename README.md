@@ -71,3 +71,15 @@ Die Anwendung verwendet folgende HTTP-Endpunkte des Backends:
 
 - GET /api/pse-elements: Liste aller Elemente
 - GET /api/pse-elements/:id: Einzelnes Element anhand seiner ID
+
+## Build
+
+Um die Anwendung für den Produktivbetrieb zu bauen:
+
+```bash
+
+$ ng build
+
+```
+
+Das Ergebnis befindet sich anschließend im Verzeichnis dist/.
