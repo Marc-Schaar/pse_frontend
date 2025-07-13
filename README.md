@@ -1,6 +1,7 @@
 # Periodensystem der Elemente
 
 Dieses Projekt ist eine Angular-Anwendung zur Darstellung des Periodensystems der Elemente. Die Daten werden über eine REST-API von einem externen Backend geladen.
+Das dazugehörige Backend findest du [hier](https://github.com/Marc-Schaar/pse_backend).
 
 ## Voraussetzungen
 
