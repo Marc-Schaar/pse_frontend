@@ -16,10 +16,21 @@ export class ElementCardComponent {
 
   @Output() elementDetail = new EventEmitter<number>();
 
+  /**
+   * Emits the ID of the clicked element to notify the parent component
+   * to open the detail dialog.
+   *
+   * @param id - The ID of the chemical element.
+   */
   public openDialog(id: number) {
     this.elementDetail.emit(id);
   }
 
+  /**
+   * Returns a CSS class name based on the element's category.
+   *
+   * @returns The CSS class name corresponding to the element category.
+   */
   public getElementClass(): string {
     switch (this.element.kategorie) {
       case 'Halogen':
@@ -38,7 +49,6 @@ export class ElementCardComponent {
         return 'nichtmetall';
       case 'Übergangsmetall':
         return 'uebergangsmetall';
-
       case 'Seltene Erden':
         return 'seltene-erden';
       default:

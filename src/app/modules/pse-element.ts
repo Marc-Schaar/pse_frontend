@@ -33,6 +33,9 @@ export class PseElement {
     this.periode = obj?.periode || 0;
   }
 
+  /**
+   * Returns a plain object representation of the element for serialization or database writing.
+   */
   toJSON() {
     return {
       id: this.id,
