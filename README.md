@@ -1,59 +1,73 @@
-# PseFrontend
+# Periodensystem der Elemente
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+Dieses Projekt ist eine Angular-Anwendung zur Darstellung des Periodensystems der Elemente. Die Daten werden über eine REST-API von einem externen Backend geladen.
 
-## Development server
+## Voraussetzungen
 
-To start a local development server, run:
+Node.js
+Angular CLI
+Backend mit einer API unter http://localhost:3000/api/pse-elements
 
-```bash
-ng serve
-```
+## Starten der Anwendung
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Stelle sicher, dass das Backend läuft.
+Navigiere im Terminal in das Projektverzeichnis des Frontends.
+Starte den Entwicklungsserver mit:
 
 ```bash
-ng generate component component-name
+$ ng serve
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+oder, um direkt die Anwendung zu öffnen:
 
 ```bash
-ng generate --help
+$ ng serve --open
 ```
 
-## Building
+Die Anwendung ist unter http://localhost:4200/ erreichbar.
 
-To build the project run:
+## Funktionen
 
-```bash
-ng build
-```
+- Darstellung aller Elemente im Periodensystem
+- Detailanzeige einzelner Elemente in einem Dialog
+- Suche nach Namen oder Ordnungszahl
+- URL-basiertes Routing (?id=8 z. B. für Sauerstoff)
+- Farbige Kategorisierung nach Elementgruppen
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Aufbau
 
-## Running unit tests
+### Komponenten
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- MainLibaryComponent: Hauptansicht mit Übersicht und Suchfeld
 
-```bash
-ng test
-```
+- ElementCardComponent: Einzelne Darstellung pro Element
 
-## Running end-to-end tests
+- ElementCardDialogComponent: Detailansicht eines Elements im Overlay
 
-For end-to-end (e2e) testing, run:
+### Service
 
-```bash
-ng e2e
-```
+- ApiService: Kommunikation mit dem Backend und Steuerung der URL-Parameter
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Datenmodell
 
-## Additional Resources
+Das Model PseElement enthält unter folgende Eigenschaften:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Ordnungszahl
+- Symbol
+- Name
+- Atommasse
+- Aggregatzustand
+- Kategorie (z. B. Edelgas, Nichtmetall)
+- Siedepunkt und Schmelzpunkt
+- Elektronegativität
+- Dichte
+- Entdeckungsjahr
+- Oxidationszahlen
+- Gruppe und Periode im Periodensystem
+
+## API-Endpunkte
+
+Die Anwendung verwendet folgende HTTP-Endpunkte des Backends:
+
+- GET /api/pse-elements: Liste aller Elemente
+- GET /api/pse-elements/:id: Einzelnes Element anhand seiner ID
