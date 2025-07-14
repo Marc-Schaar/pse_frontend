@@ -13,6 +13,11 @@ Das dazugehörige Backend findest du [hier](https://github.com/Marc-Schaar/pse_b
 
 Stelle sicher, dass das Backend läuft.
 Navigiere im Terminal in das Projektverzeichnis des Frontends.
+
+```bash
+npm install
+```
+
 Starte den Entwicklungsserver mit:
 
 ```bash
