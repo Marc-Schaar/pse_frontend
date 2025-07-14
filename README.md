@@ -12,10 +12,16 @@ Das dazugehörige Backend findest du [hier](https://github.com/Marc-Schaar/pse_b
 ## Starten der Anwendung
 
 Stelle sicher, dass das Backend läuft.
-Navigiere im Terminal in das Projektverzeichnis des Frontends.
+
+## Projekt clonen
+
+git clone https://github.com/Marc-Schaar/pse_frontend.git
+cd pse_feontend
+
+
 
 ```bash
-npm install
+$ npm install
 ```
 
 Starte den Entwicklungsserver mit:
