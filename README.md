@@ -15,9 +15,12 @@ Stelle sicher, dass das Backend läuft.
 
 ## Projekt clonen
 
-git clone https://github.com/Marc-Schaar/pse_frontend.git
-cd pse_feontend
+```bash
 
+$ git clone https://github.com/Marc-Schaar/pse_frontend.git
+$ cd pse_frontend
+
+```
 
 
 ```bash
